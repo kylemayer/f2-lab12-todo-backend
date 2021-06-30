@@ -86,17 +86,12 @@ describe('app routes', () => {
         }
       ];
 
-      await fakeRequest(app)
+      const data = await fakeRequest(app)
         .put('/api/todos/2')
         .set('Authorization', token)
         .expect('Content-Type', /json/)
         .expect(200);
 
-      const data = await fakeRequest(app)
-        .get('/api/todos')
-        .set('Authorization', token)
-        .expect('Content-Type', /json/)
-        .expect(200);
 
       expect(data.body).toEqual(expectation);
     });
