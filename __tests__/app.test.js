@@ -81,7 +81,7 @@ describe('app routes', () => {
         {
           id: 2,
           todo: 'brush teeth',
-          completed: false,
+          completed: true,
           owner_id: 2
         }
       ];
